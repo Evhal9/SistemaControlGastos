@@ -1,28 +1,52 @@
 import { NavLink } from 'react-router-dom'
 
-
 function Nav() {
   return (
-    <nav className= "flex fixed justify-between w-full">
-      <ul  className= "flex fixed justify-between flex-row bg-[#a2d2ff] items-center w-full" >
-        <li>
-          <NavLink to="/" className="font-light  ml-6 text-center hover:bg-[#bde0fe]  hover:text-[#ffafcc]">Inicio</NavLink>
+    <nav className="fixed top-0 left-0 w-screen h-11 bg-[#a2d2ff]">
+      <ul className="flex h-full">
+        <li className="flex-1">
+          <NavLink
+            to="/"
+            className="flex h-full w-full items-center justify-center font-light text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]"
+          >
+            Inicio
+          </NavLink>
         </li>
 
-        <li>
-          <NavLink to="/control" className="font-light text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]">Control</NavLink>
+        <li className="flex-1">
+          <NavLink
+            to="/control"
+            className="flex h-full w-full items-center justify-center font-light text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]"
+          >
+            Control
+          </NavLink>
         </li>
 
-        <li>
-          <NavLink to="/balance" className="font-light text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]">Balance</NavLink>
+        <li className="flex-1">
+          <NavLink
+            to="/balance"
+            className="flex h-full w-full items-center justify-center font-light text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]"
+          >
+            Balance
+          </NavLink>
         </li>
 
-        <li>
-          <NavLink to="/qa" className="font-light text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]">QA</NavLink>
+        <li className="flex-1">
+          <NavLink
+            to="/qa"
+            className="flex h-full w-full items-center justify-center font-light text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]"
+          >
+            QA
+          </NavLink>
         </li>
 
-        <li>
-          <NavLink to="/login" className="font-light  mr-6 text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]">Iniciar sesión</NavLink>
+        <li className="flex-1">
+          <NavLink
+            to="/login"
+            className="flex h-full w-full items-center justify-center font-light text-center hover:bg-[#bde0fe] hover:text-[#ffafcc]"
+          >
+            Iniciar sesión
+          </NavLink>
         </li>
       </ul>
     </nav>
