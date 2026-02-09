@@ -6,6 +6,8 @@ function Home() {
   const [showText, setShowText] = useState(false)
   useEffect(() => { setShowText(true)},[]);
 
+  
+
     
 
   return (
@@ -70,7 +72,27 @@ function Home() {
         </div>
       </div>
 
-      <div className="h-8"></div>
+      <div className=" flex flex-col gap-8">
+        <h3> Beneficios de usar Alme</h3>
+        <div className=" flex flex-row gap-5">
+            <secction className=" flex flex-col" >
+              <h4>Registrá tus gastos</h4>
+              <p>Anotá cada gasto en segundos y mantené todo organizado por fecha y categoría. </p>
+            </secction>
+            <secction className=" flex flex-col" >
+              <h4>Control diario y mensual</h4>
+              <p>Visualizá cuánto gastás por día, semana o mes sin hacer cuentas a mano.</p>
+            </secction>
+            <secction className=" flex flex-col" >
+              <h4>Entendé tus hábitos</h4>
+              <p>Detectá en qué se va tu dinero y descubrí oportunidades para ahorrar.</p>
+            </secction>
+            <secction className=" flex flex-col" >
+              <h4>Mantené el control </h4>
+              <p>Evitá sorpresas a fin de mes con un seguimiento claro de tus consumos.</p>
+            </secction>
+        </div>    
+      </div>
     </>
   );
 }
