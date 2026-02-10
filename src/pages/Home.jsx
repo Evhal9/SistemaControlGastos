@@ -1,4 +1,5 @@
-import banner from '../assets/banner2.avif'
+import banner from '../assets/banner2.jfif'
+import img1 from '../assets/img1.png'
 import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from "react"
 
@@ -23,7 +24,7 @@ function Home() {
         text-left
         gap-10" 
         style={{ backgroundImage: `url(${banner})` }}>
-        <h3
+        <h3 
           className={`text-5xl p-0 sm:pl-20 font-bold text-[#302f2f] sm:text-left text-center
             transition-all duration-1500 ease-out ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6"}
         `}>
@@ -72,7 +73,10 @@ function Home() {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-8">
+      <div className=" flex flex-row gap-8 bg-[#94d2bd]">
+            <section className="sm:block hidden  bg-[#94d2bd] rounded-4xl  bg-cover top-140 right-[5] h-150 w-150" style={{ backgroundImage: `url(${img1})` }}></section>
+
+        <div>
         <h3> Beneficios de usar Alme</h3>
         <div className=" flex flex-row gap-5">
             <secction className=" flex flex-col" >
@@ -92,6 +96,7 @@ function Home() {
               <p>Evitá sorpresas a fin de mes con un seguimiento claro de tus consumos.</p>
             </secction>
         </div>    
+      </div>
       </div>
     </>
   );
