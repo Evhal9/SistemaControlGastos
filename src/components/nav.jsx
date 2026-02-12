@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { useEffect, useState } from "react"
+import logo from '../assets/logo.png'
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -16,14 +17,14 @@ function Nav() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all
-      ${scrolled ? "bg-[#c96928]" : "bg-transparent"}`}
+      ${scrolled ? "bg-[#8b6ad9]" : "bg-transparent"}`}
     >
       {/* Header */}
       <div className="flex h-11 items-center justify-between px-4 sm:hidden">
-        <span className="text-black">Logo</span>
+        <span className="text-black"> Logo</span>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-[#ee9c21] text-2xl"
+          className="text-[#FFF4FA] text-2xl"
         >
           ☰
         </button>
@@ -48,7 +49,7 @@ function Nav() {
             <NavLink
               to={to}
               onClick={() => setMenuOpen(false)}
-              className={` ${menuOpen ? "flex  h-1/5 aling-center items-center justify-end py-3 sm:py-0 bg-[#ee9c21] text-[#e9d7a5]" : "flex h-full items-center justify-center py-3 sm:py-0 hover:bg-[#ee9c21] hover:text-[#e9d7a5]"}`}
+              className={` ${menuOpen ? " font-semibold tracking-wide flex  h-1/5 aling-center items-center justify-end py-3 sm:py-0 bg-[#8b6ad9] text-[#fff4fa] hover:text-[#fff4fa]" : "flex h-full items-center justify-center py-3 sm:py-0 hover:bg-[#9c8fe8] hover:text-[#fff4fa] font-semibold tracking-wide hover:border-white hover:border-[2px] "}`}
             >
               {label}
             </NavLink>
