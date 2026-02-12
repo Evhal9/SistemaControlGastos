@@ -42,9 +42,11 @@ function Home() {
             w-screen
             items-center
             text-center
+            bg-[#fff4fa]
+            
             '> 
             <section className='relative sm:w-1/3  '>
-              <p className={` h-50  absolute w-[100%] top-[-250px] rounded-tr-3xl
+              <p className={` h-50  absolute w-[100%] top-[-200px] rounded-tr-3xl
                bg-gradient-to-b 
                from-transparent from-0%
                via-[#f7d6e8] via-20%
@@ -54,13 +56,21 @@ function Home() {
             → Registrá tus gastos diarios </p>
             </section>
             <section className='relative sm:w-1/3  '>
-              <p className={` h-50 bg-[#6fd1d8] border-1 border-black
+              <p className={` h-50 absolute w-[100%] top-[-200px] rounded-tr-3xl
+              bg-gradient-to-b 
+               from-transparent from-0%
+               via-[#f7d6e8] via-20%
+               to-[#fff4fa] to-60%
             transition-all delay-1400 duration-1500 ease-out ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6"}
 `}>         
             → Analizá tus consumos </p>
             </section>
             <section className='relative sm:w-1/3 '>
-               <p className={` h-50 bg-[#6fd1d8] border-1 border-black
+               <p className={` h-50  absolute w-[100%] top-[-200px] rounded-tr-3xl
+               bg-gradient-to-b 
+               from-transparent from-0%
+               via-[#f7d6e8] via-20%
+               to-[#fff4fa] to-60%
             transition-all delay-1700 duration-1500 ease-out ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6"}
 `}>
            → Tomá mejores decisiones financieras
