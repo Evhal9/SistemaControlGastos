@@ -4,8 +4,14 @@ import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from "react"
 
 function Home() {
-  const [showText, setShowText] = useState(false)
-  useEffect(() => { setShowText(true)},[]);
+  const [showText, setShowText] = useState(false);
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowText(true);
+  }, 50); // 50ms es suficiente
+
+  return () => clearTimeout(timer);
+}, []);
 
   
 
@@ -14,7 +20,7 @@ function Home() {
   return (
     <>
       <div className="
-        h-[85vh]
+        min-h-[80vh]
         w-auto
         bg-cover
         bg-center
@@ -25,6 +31,7 @@ function Home() {
         text-left
         gap-10 " 
       style={{ backgroundImage: `url(${banner})` }}>
+      
       <div className="relative">
         <h3 
           className={`text-5xl p-0 sm:pl-20 font-bold text-[#302f2f] sm:text-left text-center absolute top-[-290px]
@@ -35,56 +42,58 @@ function Home() {
         </h3></div>
       </div>
 
-        <div className='
-            flex
-            flex-row
-            items-left
-            w-screen
-            items-center
-            text-center
-            bg-[#fff4fa]
-            
-            '> 
-            <section className='relative sm:w-1/3  '>
-              <p className={` h-50  absolute w-[100%] top-[-200px] rounded-tr-3xl
-               bg-gradient-to-b 
-               from-transparent from-0%
-               via-[#f7d6e8] via-20%
-               to-[#fff4fa] to-60%
-            transition-all delay-1200 duration-1500 ease-out ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6"}
-            `}>
-            → Registrá tus gastos diarios </p>
-            </section>
-            <section className='relative sm:w-1/3  '>
-              <p className={` h-50 absolute w-[100%] top-[-200px] rounded-tr-3xl
+        <section className="absolute  w-screen
+        h-60 bottom-[2.5vh]
               bg-gradient-to-b 
                from-transparent from-0%
                via-[#f7d6e8] via-20%
                to-[#fff4fa] to-60%
-            transition-all delay-1400 duration-1500 ease-out ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6"}
-`}>         
-            → Analizá tus consumos </p>
-            </section>
-            <section className='relative sm:w-1/3 '>
-               <p className={` h-50  absolute w-[100%] top-[-200px] rounded-tr-3xl
-               bg-gradient-to-b 
-               from-transparent from-0%
-               via-[#f7d6e8] via-20%
-               to-[#fff4fa] to-60%
-            transition-all delay-1700 duration-1500 ease-out ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6"}
-`}>
-           → Tomá mejores decisiones financieras
-           </p>
-            </section>
-        </div>
+               sm:flex-col flex-row
+              items-center"></section>
+
+<div className='
+  h-40
+  flex
+  flex-col
+  sm:flex-row
+  items-center
+  justify-between
+  
+  bg-[#fff4fa]
+'>
+  {[
+    {content:"→ Registrá tus gastos diarios", css:"delay-1200 ml-10"},
+    {content: "→ Analizá tus consumos", css:"delay-1400"},
+    {content: "→ Tomá mejores decisiones financieras", css:"delay-1900 mr-10"},
+  ].map(({content,css}) =>(
+    <h4 
+      key={content}
+      className={`
+        ${css}
+        h-full
+        text-center
+        transition-all duration-1500 ease-out
+        mb-15 text-5xl font-bold tracking-wide
+
+        bg-gradient-to-r from-[#ffffff] to-[#100000] bg-clip-text text-transparent
+        ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6"}
+      `}
+    >
+      {content}
+    </h4>
+  ))}
+</div>
+          
+
+ 
+
+      
         <div className='
             flex
             flex-col
             items-left
             justify-left
             text-center
-            sm:pt-10
-            pt-12
             
             '>
           <button  className=" sm:animate-pulse sm:hover:animate-bounce text-[#ba4226]  ">
