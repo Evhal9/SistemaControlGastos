@@ -34,7 +34,7 @@ function Home() {
       
       <div className="relative">
         <h3 
-          className={`text-5xl p-0 sm:pl-20 font-bold text-[#302f2f] sm:text-left text-center absolute top-[-290px]
+          className={`sm:text-5xl text-3xl pl-5 sm:pl-20 font-bold text-[#302f2f] sm:text-left text-center absolute top-[-33vh]
              transition-all duration-1500 ease-out ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6" }`}>
           ¡Controlá tus gastos
           <br />
@@ -52,32 +52,35 @@ function Home() {
               items-center"></section>
 
 <div className='
-  h-40
+  sm:h-40
+
   flex
   flex-col
   sm:flex-row
   items-center
-  justify-between
+  sm:justify-between
+  justify-center
   
   bg-[#fff4fa]
 '>
   {[
-    {content:"→ Registrá tus gastos diarios", css:"delay-1200 ml-10"},
-    {content: "→ Analizá tus consumos", css:"delay-1400"},
-    {content: "→ Tomá mejores decisiones financieras", css:"delay-1900 mr-10"},
+    {content:"✧ Registrá tus gastos diarios", css:"delay-1200 sm:ml-10 from-[#6fd1d8] from-10% to-[#7C9FF2] "},
+    {content: "✧ Analizá tus consumos", css:"delay-1400  from-[#7C9FF2] to-[#8B6AD9]"},
+    {content: "✧ Tomá mejores  decisiones financieras", css:"delay-1900 sm:mr-10   from-[#8B6AD9] to-[#9C8FE8]"},
   ].map(({content,css}) =>(
     <h4 
       key={content}
       className={`
         ${css}
-        h-full
+        sm:h-full
         text-center
         transition-all duration-1500 ease-out
-        mb-15 text-5xl font-bold tracking-wide
-
-        bg-gradient-to-r from-[#ffffff] to-[#100000] bg-clip-text text-transparent
+        mb-15 text-3xl sm:text-5xl font-bold tracking-wide
+        sm:w-[33%]
+        bg-gradient-to-r  bg-clip-text text-transparent
         ${showText? "opacity-100 translate-y-0": "opacity-0 translate-y-6"}
-      `}
+      `} style={{fontFamily: "Gowun Dodum, sans-serif"}}
+       
     >
       {content}
     </h4>
