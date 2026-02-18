@@ -1,10 +1,12 @@
 import banner from '../assets/banner.jpg'
-import img1 from '../assets/img1.png'
+import img1 from '../assets/lineasfondo.png'
 import card from '../assets/card.jpg'
 import grid1 from '../assets/grid1.png'
 import grid2 from '../assets/grid2.png'
 import grid3 from '../assets/grid3.png'
 import grid4 from '../assets/grid4.png'
+import usingAlme from '../assets/usingAlme.png'
+
 
 import { useEffect, useState } from "react"
 
@@ -67,26 +69,55 @@ function Home() {
           ))}
         </div>
 
-      <div className=" h-auto w-screen flex flex-row bg-[#fff4fa]">
-        <div className='bg-[#fff4fa] h-auto w-[30vw] sm:block hidden'>
-           
-        </div>
-        <div className="sm:w-[100%] h-auto grid sm:gap-10 sm:grid-cols-2  grid-cols-1 sm:grid-rows-3 grid-rows-[30vw_auto] place-items-center justify-items-center">
-          <h4 className="sm:col-span-2 sm:text-5xl text-3xl font-bold text-center text-[#302f2f] justify-center  ">Beneficios de usar Alme</h4>
+      <div id="cards" className=" h-auto w-screen justify-center align-center gap-2 flex flex-col bg-[#fff4fa] bg-cover" style={{  }}>
+        <h4 className=" w-screen text-center text-[#474747] text-4xl">Beneficios de usar Alme</h4>
+        <div className="grid grid-cols-2 grid-rows-2 gap-12">
       {[
           {contenth4:"Registrá tus gastos",contentp:" Anotá cada gasto en segundos y mantené todo organizado por fecha y categoría. ",imgen: grid1},
           {contenth4:"Control diario y mensual",contentp:"Visualizá cuánto gastás por día, semana o mes sin hacer cuentas a mano.",imgen:grid2},
           {contenth4:"Entendé tus hábitos",contentp:"Detectá en qué se va tu dinero y descubrí oportunidades para ahorrar. ", imgen:grid3},
           {contenth4:"Mantené el control",contentp:"Evitá sorpresas a fin de mes con un seguimiento claro de tus consumos.", imgen:grid4},
       ].map(({contenth4,contentp, imgen}) =>(
-        <div className='flex items-center justify-items-center flex-col bg-cover gap-4 sm:w-[20vw] rounded-3xl border-2 border-black ' >
-          <img src={imgen} alt="" className='sm:h-[30vh] sm:w-[40vw] h-[40vh] w-[30vw] '/>
-          <h4>{contenth4} </h4>
-          <p> {contentp} </p>
+        <div className='sm:m-12 flex items-center justify-items-center flex-row bg-cover gap-2 rounded-3xl border-2 border-[#f29bc1] hover:border-[#5a8cf2] hover:scale-[105%] transition-all ' style={{ backgroundImage:  `url(${card})`  }} >
+          <img src={imgen} alt="" className='sm:h-[30vh] sm:w-[20vw] h-[40vh] w-[30vw] rounded-tr-full
+          rounded-br-full bg-[#fff4fa]'/>
+          <div className=" flex flex-col align-center justify-center gap-10 text-center h-[100%]">
+            <h4 className="text-2xl text-semibold">{contenth4} </h4>
+            <p> {contentp} </p>
+          </div>
         </div>
       ))}
 
 </div>
+      </div>
+
+      <div id="bullets" className='flex bg-[#fff4fa] m-9 justify-center align-center flex-row  '>
+      {[
+      {content:"App facil de usar", colorBg:"bg-[#f7d6e8] border-[#f29bc1] text-[#474747]", border:" border-r-0 "},
+      {content:"Accesible desde cualquier dispositivo", colorBg:"bg-[#9c8fe8] border-[#8b6ad9] text-[#ffffff]", border:"border-r-0 border-l-0"},
+      {content:"Informacion clara y visual", colorBg:"bg-[#6fd1d8] border-[#66c6b9] text-[#ffffff]", border:"border-r-0 border-l-0"},
+      {content:"Ideal para el dia a dia", colorBg:"bg-[#ffdb78] border-[#f6c453] text-[#474747]", border:"border-l-0"},]
+      .map(({content,colorBg,border})=>(
+        <section className={` flex-1 ${colorBg} border-dashed border-3 ${border} justify-center align-center hover:border-double hover:scale-[104%] hover: transition-all`}>
+          <p className="text-3xl text-center h-[100%] ">{content}</p> 
+        </section>
+      ))}
+      
+      </div>
+
+      <div className="relative" >
+        <div className="flex flex-col w-screen h-[90vh] align-center justify-center  " > 
+          <div className="w-[100%]  h-2/7 bg-[#f8bff1] text-center flex flex-col align-center justify-center items-center">
+            <h3 className=" text-3xl" > Pensada para personas reales</h3>
+            <p> Diseñada para personas que quieren tener el control de sus gatos sin planillas complicadas ni sistemas dificiles de usar</p>
+          </div>
+          <p className="w-[100%] h-1/7 bg-[#eaadeb]  pl-[80%] text-center text-3xl" > ¿Para quien es?</p>
+          <p className="w-[100%]  h-1/7 bg-[#d09ce2] text-white text-right pr-[5%]"> Estudiantes</p>
+          <p className="w-[100%]  h-1/7 bg-[#a07cd1] text-white text-right  pr-[5%]"> Personas que quieren empezar a ahorrar</p>
+          <p className="w-[100%]  h-1/7 bg-[#906cc8] text-white text-right pr-[5%]"> Personas que quieren organizar sus gastos personales</p>
+          <p className="w-[100%]  h-1/7 bg-[#7c5bba] text-white text-right pr-[5%]">Cualquiera que quiera saber en que se va su plata </p>
+          <img src={usingAlme} alt="" className="h-[100%] w-[30%] absolute top-0 rounded-tr-full rounded-br-full"  />
+        </div>
       </div>
     </>
   );
