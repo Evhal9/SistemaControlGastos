@@ -58,14 +58,14 @@ function Qa() {
                 min-h-[80vh] w-screen bg-cover sm:bg-center  gap-10  " 
             style={{ backgroundImage:  `url(${banner})`  }}> </div>
     <div className="w-screen bg-[#fff4fa]">   
-        <div className="max-w-2xl mx-auto space-y-4 pt-2 bg-[#fff4fa]">
+        <div className="max-w-2xl mx-auto space-y-4 pt-2 pb-2 bg-[#fff4fa]">
         {items.map((item, index) => (
             <div key={index} className="border-2 border-[#5a8cf2] hover:border-[#f29bc1] rounded-xl overflow-hidden">
             
             {/* Header */}
             <button
                 onClick={() => toggle(index)}
-                className="w-full text-left p-4 bg-gray-100 hover:bg-white flex justify-between items-center"
+                className="w-full text-left p-4 bg-[#978fe0] hover:bg-white flex justify-between items-center"
             >
                 <span className="font-semibold">{item.title}</span>
                 <span className="text-xl">
@@ -73,14 +73,14 @@ function Qa() {
                 </span>
             </button>
 
-            {/* Content */}
+ 
             <div
-                className={`
+                className={`bg-white
                 transition-all duration-500 ease-in-out overflow-hidden
                 ${activeIndex === index ? "max-h-40 p-4" : "max-h-0"}
                 `}
             >
-                <p className="text-gray-600">{item.content}</p>
+                <p className="text-gray-600  ">{item.content}</p>
             </div>
 
             </div>
