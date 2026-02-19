@@ -42,7 +42,7 @@ function Nav() {
           { to: "/", label: "Inicio" },
           { to: "/control", label: "Control" },
           { to: "/balance", label: "Balance" },
-          { to: "/qa", label: "QA" },
+          { to: "/Qa", label: "QA" },
           { to: "/login", label: "Iniciar sesión" },
         ].map(({ to, label }) => (
           <li key={to} className="flex-1">
