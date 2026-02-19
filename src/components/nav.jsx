@@ -40,7 +40,7 @@ function Nav() {
       >
         {[
           { to: "/", label: "Inicio" },
-          { to: "/control", label: "Control" },
+          { to: "/Control", label: "Control" },
           { to: "/balance", label: "Balance" },
           { to: "/Qa", label: "QA" },
           { to: "/login", label: "Iniciar sesión" },
