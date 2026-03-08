@@ -126,4 +126,4 @@ export const gastoss =[{
 ]
 
 
-export const totalGastos = gastoss.map((monto,) => ())
+
