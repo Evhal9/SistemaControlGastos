@@ -9,11 +9,11 @@ export const getIncomesByUser = async (userId) => {
   return response.json();
 };
 
-export const createIncome = async (userId, incomeData) => {
+export const createIncome = async (userId, formData) => {
   const response = await fetch(`${API_BASE_URL}/income/${userId}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(incomeData),
+    body: JSON.stringify(formData),
   });
 
   if (!response.ok) {
@@ -24,11 +24,11 @@ export const createIncome = async (userId, incomeData) => {
   return response.json();
 };
 
-export const updateIncome = async (userId, incomeId, incomeData) => {
+export const updateIncome = async (userId, incomeId, formData) => {
   const response = await fetch(`${API_BASE_URL}/income/${userId}/${incomeId}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(incomeData),
+    body: JSON.stringify(formData),
   });
 
   if (!response.ok) {

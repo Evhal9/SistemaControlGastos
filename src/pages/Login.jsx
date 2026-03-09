@@ -30,15 +30,13 @@ export default function Login() {
 
     try {
 
-      // REGISTRO
       if (!isLogin) {
-        const newUser = await createUser(nombre);
+        const newUser = await createUser(nombre,password);
         login(newUser);
         navigate("/");
         return;
       }
 
-      // LOGIN
       const users = await getUsers();
       const user = users.find((u) => u.nombre === nombre);
 

@@ -11,6 +11,11 @@ export const getUserById = async (id) => {
   return response.json();
 };
 
+export const getSaldoById = async (id) => {
+  const response = await fetch(`${API_BASE_URL}/users/${id}/saldo`);
+  return response.json();
+};
+
 export const createUser = async (nombre, password) => {
   const response = await fetch("http://localhost:3000/users", {
     method: "POST",
@@ -23,7 +28,7 @@ export const createUser = async (nombre, password) => {
     })
     
   });
-  console.log(nombre, password)
+ 
 
   return response.json();
 };
