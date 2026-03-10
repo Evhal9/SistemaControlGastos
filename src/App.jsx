@@ -22,14 +22,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/Qa" element={<Qa />} />
         <Route
-          path="/Balance"
-          element={
-            <ProtectedRoute>
-              <Control />
-            </ProtectedRoute>
-          }
-        />
-        <Route
           path="/Control"
           element={
             <ProtectedRoute>

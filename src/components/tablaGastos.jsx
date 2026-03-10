@@ -141,7 +141,7 @@ function TablaGastos() {
             <p className="w-[30%]">{gasto.descripcion}</p>
             <p className="w-[20%]">{gasto.categoria}</p>
 
-            <p className="w-[15%] text-red-500 font-medium">
+            <p className="w-[15%] text-red-500 font-medium text-left">
               ${gasto.monto}
             </p>
 

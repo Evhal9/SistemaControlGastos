@@ -20,7 +20,6 @@ function Nav() {
   const links = [
     { to: "/", label: "Inicio" },
     { to: "/Control", label: "Control" },
-    { to: "/balance", label: "Balance" },
     { to: "/Qa", label: "QA" }
   ]
 
